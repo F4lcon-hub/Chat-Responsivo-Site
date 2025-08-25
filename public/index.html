@@ -7,12 +7,22 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="chat-container">
-    <h2>Chat Responsivo</h2>
-    <div id="messages"></div>
-    <input id="username" type="text" placeholder="Seu nome">
-    <input id="message" type="text" placeholder="Digite sua mensagem">
-    <button id="send">Enviar</button>
+  <div id="chat-main">
+    <aside id="user-list">
+      <h3>Usuários</h3>
+      <ul id="users"></ul>
+    </aside>
+    <section id="chat-section">
+      <header id="chat-header">
+        <h2>Chat Responsivo</h2>
+      </header>
+      <div id="messages"></div>
+      <form id="chat-form">
+        <input id="username" type="text" placeholder="Seu nome">
+        <input id="message" type="text" placeholder="Digite sua mensagem">
+        <button id="send">Enviar</button>
+      </form>
+    </section>
   </div>
   <script src="/socket.io/socket.io.js"></script>
   <script src="app.js"></script>

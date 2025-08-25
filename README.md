@@ -2,31 +2,24 @@
 
 Projeto de chat em tempo real para estudo de JavaScript, sem fins lucrativos, desenvolvido por Falcon.
 
-## Hierarquia do Projeto
+## Visual
 
-1. **Estrutura principal (HTML)**
-   - Header: informações do usuário, login/logout, alternância de tema.
-   - Modal de login/cadastro: entrada do usuário, senha e avatar.
-   - Lista de usuários online.
-   - Área de mensagens (chat).
-   - Status de digitação.
-   - Formulário de envio de mensagem (texto, emoji, arquivo, áudio).
-   - Footer: informações do projeto.
+Interface inspirada no Discord, com layout moderno, cores escuras, bordas arredondadas e responsividade.
 
-2. **Estilos (CSS)**
-   - Layout geral e responsividade.
-   - Estilos do header, modal, chat, formulário, footer.
-   - Modo escuro/claro.
-   - Comentários explicativos para cada seção.
+## Estrutura do Projeto
 
-3. **Lógica (JavaScript)**
-   - Declaração de variáveis e elementos (no topo).
-   - Funções utilitárias (ex: formatMessage, updateHeader).
-   - Autenticação (login/cadastro/logout).
-   - Tema escuro/claro.
-   - Eventos de interface (envio de mensagem, gravação de áudio, digitação).
-   - Comunicação com o servidor (Socket.io).
-   - Renderização de mensagens e atualizações de interface.
+```
+public/
+  ├── index.html
+  ├── style.css
+  └── app.js
+server.js
+package.json
+```
+
+- Todos os arquivos estáticos (HTML, CSS, JS) ficam na pasta `public`.
+- O servidor Express serve os arquivos da pasta `public`.
+- O Socket.io é utilizado para comunicação em tempo real.
 
 ## Funcionalidades
 
@@ -38,18 +31,20 @@ Projeto de chat em tempo real para estudo de JavaScript, sem fins lucrativos, de
 - Indicação de usuário digitando.
 - Alternância entre modo escuro/claro.
 - Layout responsivo para desktop e mobile.
+- Visual moderno inspirado no Discord.
 
-## Como usar
+## Como usar localmente
 
 1. Instale as dependências do backend (Node.js):
    ```bash
-   npm install express socket.io
+   npm install
    ```
 2. Inicie o servidor:
    ```bash
-   node server.js
+   npm start
    ```
-3. Abra o `index.html` no navegador.
+3. Acesse `http://localhost:3000` no navegador.
+
 
 ## Observações
 - O projeto não utiliza banco de dados nem autenticação real.
