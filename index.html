@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Chat App</h1>
+            <div class="header-actions">
+                <input type="text" id="usernameInput" placeholder="Nome de usuário" style="width:120px;">
+                <select id="avatarInput">
+                    <option value="https://cdn-icons-png.flaticon.com/512/194/194938.png">😀</option>
+                    <option value="https://cdn-icons-png.flaticon.com/512/194/194935.png">😎</option>
+                    <option value="https://cdn-icons-png.flaticon.com/512/194/194937.png">👩‍💻</option>
+                    <option value="https://cdn-icons-png.flaticon.com/512/616/616408.png">🦊</option>
+                    <option value="https://cdn-icons-png.flaticon.com/512/616/616408.png">🐱</option>
+                </select>
+                <button id="setUserBtn">Entrar</button>
+                <span id="userStatus"></span>
+                <button id="logoutBtn" style="display:none;">Sair</button>
+                <button id="toggleTheme">🌙 Modo escuro</button>
+            </div>
+        </header>
+        <!-- Lista de usuários -->
+        <div id="userList" class="user-list"></div>
+        <!-- Área de mensagens -->
+        <div id="chatBox" class="chat-box"></div>
+        <!-- Status de digitação -->
+        <div id="typingStatus" class="typing-status"></div>
+        <!-- Formulário de envio de mensagem -->
+        <form id="messageForm" class="message-form">
+            <select id="privateTo">
+                <option value="">Público</option>
+            </select>
+            <input type="text" id="messageInput" placeholder="Digite sua mensagem..." autocomplete="off">
+            <select id="emojiPicker">
+                <option value="">😀</option>
+                <option value="😀">😀</option>
+                <option value="😂">😂</option>
+                <option value="😍">😍</option>
+                <option value="👍">👍</option>
+                <option value="🙏">🙏</option>
+                <option value="🎉">🎉</option>
+                <option value="😎">😎</option>
+                <option value="🥳">🥳</option>
+                <option value="😢">😢</option>
+            </select>
+            <input type="file" id="fileInput" accept="image/*,video/*,audio/*">
+            <button type="button" id="audioRecordBtn">🎤 Gravar áudio</button>
+            <audio id="audioPreview" controls style="display:none; margin-top:8px;"></audio>
+            <button type="submit">Enviar</button>
+        </form>
+        <!-- Footer informativo -->
+        <footer class="footer">
+            Este projeto é sem fins lucrativos, desenvolvido por <strong>Falcon</strong> e é apenas para estudo de JavaScript.
+        </footer>
+    </div>
+    <!-- Scripts -->
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
